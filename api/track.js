@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
     if (discordWebhookUrl) {
       const embedPayload = {
-        username: "Swastika B'day Tracker 🌸",
+        username: "Sneha B'day Tracker 🌸",
         avatar_url: "https://raw.githubusercontent.com/Rvjais/bday2026/main/happybday/file/heart.png",
         embeds: [{
           title: `🌸 New Page Opened: ${page}`,

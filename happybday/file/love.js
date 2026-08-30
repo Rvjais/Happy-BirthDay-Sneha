@@ -171,7 +171,7 @@
             ctx.shadowBlur = 6;
             ctx.font = "bold 15px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
             ctx.fillText("Click Me :)", 28, 4);
-            ctx.fillText("Swastika \u2764", 28, 40);
+            ctx.fillText("Sneha \u2764", 28, 40);
             ctx.restore();
         },
         clear: function() {
