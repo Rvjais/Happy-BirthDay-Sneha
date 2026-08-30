@@ -65,7 +65,7 @@
     nav.className = 'bday-navbar';
 
     PAGES.forEach(function(page) {
-      var isUnlocked = allUnlocked || page.id <= unlockedLevel;
+      var isUnlocked = true;
       var isActive = page.id === currentPageId;
 
       var item = document.createElement('a');
