@@ -75,6 +75,35 @@
       text-shadow: 0 0 10px #000;
     }
     
+
+    .item {
+      display: none; /* hidden by default */
+    }
+    .item.visible {
+      display: inline-block;
+      animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .load-more-btn {
+      display: block;
+      margin: 20px auto 40px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+      transition: transform 0.2s;
+    }
+    .load-more-btn:active { transform: scale(0.95); }
+    .load-more-btn.hidden { display: none; }
+    
     /* Lightbox */
     .lightbox {
       display: none;
@@ -245,6 +274,7 @@
     <div class="item" onclick="openLightbox(this, 'gallery/media/20220726_140307.webp', 'image')"><img src="gallery/media/20220726_140307.webp" loading="lazy"></div>
 
   </div>
+  <button id="loadMoreBtn" class="load-more-btn" onclick="loadMoreItems()">Load More Memories ??</button>
   
   <div class="lightbox" id="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
@@ -253,6 +283,29 @@
 
   <script src="file/navbar.js"></script>
   <script>
+    
+    let currentItemIndex = 0;
+    const itemsPerLoad = 12;
+    const allItems = document.querySelectorAll('.item');
+    
+    function loadMoreItems() {
+      let loaded = 0;
+      while (loaded < itemsPerLoad && currentItemIndex < allItems.length) {
+        allItems[currentItemIndex].classList.add('visible');
+        currentItemIndex++;
+        loaded++;
+      }
+      if (currentItemIndex >= allItems.length) {
+        const btn = document.getElementById('loadMoreBtn');
+        if(btn) btn.classList.add('hidden');
+      }
+    }
+    
+    // Initial load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadMoreItems();
+    });
+    
     function openLightbox(element, src, type) {
       const container = document.getElementById('lightbox-container');
       container.innerHTML = '';
