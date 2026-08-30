@@ -225,7 +225,7 @@
             return {
                 birdSize: Math.max(38, Math.min(60, baseSize / 10)),
                 pipeWidth: Math.max(55, Math.min(90, baseSize / 6)),
-                pipeGap: Math.max(140, baseSize * 0.28),
+                pipeGap: Math.max(200, baseSize * 0.38),
                 groundHeight: Math.max(60, canvas.height * 0.12),
                 pipeSpeed: Math.max(2.2, canvas.width / 160),
                 gravity: 0.28,
@@ -256,7 +256,7 @@
         let sizes = {
             birdSize: 45,
             pipeWidth: 70,
-            pipeGap: 160,
+            pipeGap: 210,
             groundHeight: 70,
             pipeSpeed: 2.8,
             gravity: 0.28,
@@ -360,7 +360,7 @@
             },
 
             update: function() {
-                const pipeInterval = window.innerWidth <= 768 ? 105 : 95;
+                const pipeInterval = window.innerWidth <= 768 ? 140 : 120;
                 if (frames % pipeInterval === 0) {
                     const pipeHeight = canvas.height * 0.55;
                     const minPipeY = -pipeHeight * 0.75;
