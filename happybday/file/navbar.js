@@ -4,7 +4,8 @@
     { id: 1, name: 'Blossom', icon: '🌸', file: 'index.html' },
     { id: 2, name: 'Music', icon: '🎵', file: 'music.html' },
     { id: 3, name: 'Wishes', icon: '💖', file: 'birthday.html' },
-    { id: 4, name: 'Arcade', icon: '🎮', file: 'games.html' }
+    { id: 4, name: 'Arcade', icon: '🎮', file: 'games.html' },
+    { id: 5, name: 'Gallery', icon: '📸', file: 'gallery.html' }
   ];
 
   // Determine current page ID accurately on local and Vercel clean URLs
@@ -12,7 +13,9 @@
   var href = window.location.href.toLowerCase();
   var currentPageId = 1;
 
-  if (pathName.includes('game') || pathName.includes('arcade') || href.includes('games')) {
+  if (pathName.includes('gallery') || href.includes('gallery')) {
+    currentPageId = 5;
+  } else if (pathName.includes('game') || pathName.includes('arcade') || href.includes('games')) {
     currentPageId = 4;
   } else if (pathName.includes('birth') || pathName.includes('wish') || href.includes('birthday')) {
     currentPageId = 3;
@@ -31,7 +34,7 @@
     unlockedLevel = currentPageId;
     localStorage.setItem('bday_unlocked_level', unlockedLevel.toString());
   }
-  if (currentPageId === 4 || unlockedLevel >= 4) {
+  if (currentPageId === 5 || unlockedLevel >= 5) {
     allUnlocked = true;
     localStorage.setItem('bday_all_unlocked', 'true');
   }

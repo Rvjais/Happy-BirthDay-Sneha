@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sneha & Sakshi's Gallery ???</title>
+  <link rel="stylesheet" href="file/navbar.css">
+  <style>
+    :root {
+      --neon-pink: #ff69b4;
+      --deep-bg: rgba(10, 14, 42, 0.85);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-image: url('img2.png');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      background-color: #050827;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 14px 100px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px var(--neon-pink);
+      margin-bottom: 20px;
+    }
+    .masonry {
+      columns: 3 250px;
+      column-gap: 15px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .item {
+      margin-bottom: 15px;
+      display: inline-block;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s;
+      background: rgba(0,0,0,0.4);
+    }
+    .item:hover { transform: scale(1.02); }
+    .item img, .item video {
+      width: 100%;
+      display: block;
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px; right: 30px;
+      color: white; font-size: 40px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sneha & Sakshi ???</h1>
+  <div class="masonry">
+    <div class="item"><video onclick="openLightbox(this)" style="cursor:pointer" preload="none" poster=""><source src="gallery/media/VID_46030313_085205_337.mp4" type="video/mp4"></video></div>
+    <div class="item"><video onclick="openLightbox(this)" style="cursor:pointer" preload="none" poster=""><source src="gallery/media/VID_46010725_174123_180.mp4" type="video/mp4"></video></div>
+    <div class="item"><video onclick="openLightbox(this)" style="cursor:pointer" preload="none" poster=""><source src="gallery/media/VID_46000529_192045_409.mp4" type="video/mp4"></video></div>
+    <div class="item"><img src="gallery/media/Snapchat-899432065.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-885536433.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-812217158.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-802809504.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-801033077.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-792136849.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-708730836.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-704034707.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-679957998.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-669231768.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-536149281.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-517629976.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-461545193.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-454230145.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-434027577.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-399075953.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-397696219.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-375718501.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-30972272.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-364079460.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-244603801.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-214068811.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-212390881.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><video onclick="openLightbox(this)" style="cursor:pointer" preload="none" poster=""><source src="gallery/media/Snapchat-2075317183.mp4" type="video/mp4"></video></div>
+    <div class="item"><img src="gallery/media/Snapchat-1935014576.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1988793815.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1886981871.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1793396771.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1716278779.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-171208227.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1632867038.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1627687006.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1583119049.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-153914775.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1536608579.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1502968668.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1491266896.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1470327343.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-146889329.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1423208304.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1318474703.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1232128756.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1221528635.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1205756688.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-116413801.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1161847309.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-116097254.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-110596335.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Snapchat-1018487909.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Screenshot_20220720-182049_Snapchat.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/Screenshot_20210731-215128_Photos.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_3968_1669783688116.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20251019_001837.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20251019_001612.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20251019_001622.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20250916_231601_013.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20251019_001533.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20250916_165745_944.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20250916_231359.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20250916_231239.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20240329_144654.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20240329_144640.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230917_214544.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230917_214511.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230917_213942.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230917_214506.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230917_213853.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230102_141539.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230101_164554_TIMEBURST9.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230101_163417.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230101_163340.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20230101_163337.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_024851.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_024238.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_024238(1).webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_024139.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_023727.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221025_023628.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221024_222432_755.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221024_222332_833.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221024_222309_572.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221024_222017.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG_20221024_221943_481.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0060.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0059.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0058.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0057.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0056.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0050.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0049.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0046.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0045.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0020.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0022.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0018.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0017.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0016.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0015.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260801-WA0014.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260508-WA0078.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260508-WA0070.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260508-WA0056.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0167.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0163.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0093.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0160.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0046(1).webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20260215-WA0039.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20251018-WA0044.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20251018-WA0043.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20251018-WA0042.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20250806-WA0104.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20230710-WA0006.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221025-WA0069.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221025-WA0068.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221025-WA0067.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221022-WA0037.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221025-WA0065.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221022-WA0018.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221022-WA0017.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20221022-WA0015.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20220725-WA0008.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20220527-WA0005.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20210917-WA0024.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20210831-WA0055.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/IMG-20210731-WA0040.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20230416_083310.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20230416_083308.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20221206_185307.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20221206_183341.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20211229_223411.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/1672595696707.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/1672595684687.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/1672595707728.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+    <div class="item"><img src="gallery/media/20220726_140307.webp" loading="lazy" onclick="openLightbox(this)" style="cursor:pointer"></div>
+
+  </div>
+  
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <div id="lightbox-container" style="display:flex; justify-content:center; align-items:center; width:100%; height:100%"></div>
+  </div>
+
+  <script src="file/navbar.js"></script>
+  <script>
+    function openLightbox(element) {
+      const container = document.getElementById('lightbox-container');
+      container.innerHTML = '';
+      if(element.tagName.toLowerCase() === 'img') {
+        const img = document.createElement('img');
+        img.src = element.src;
+        img.className = 'lightbox-content';
+        container.appendChild(img);
+      } else if (element.tagName.toLowerCase() === 'video') {
+        const vid = document.createElement('video');
+        vid.src = element.querySelector('source').src;
+        vid.controls = true;
+        vid.autoplay = true;
+        vid.className = 'lightbox-content';
+        container.appendChild(vid);
+      }
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.getElementById('lightbox-container').innerHTML = '';
+    }
+  </script>
+</body>
+</html>
